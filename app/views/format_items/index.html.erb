@@ -1,0 +1,21 @@
+<h1> FormatItems </h1>
+
+<br>
+
+<ul>
+  <% @format_items.each do |fi| %>
+    <li> <%= fi.indeling_code %> | <%= fi.versie_nummer %> | <%= fi.format_version_id %> | <%= fi.item_sleutel %> |
+    <%=link_to 'koppelingen', format_format_version_format_item_format_item_links_path(@format,@format_version,fi)  %> </li>
+  <%end%>
+</ul>
+
+<br>
+
+<%= link_to 'Format versions', format_format_versions_url%>
+<br>
+
+<h2> format = <%=@format.present?%></h2>
+<br>
+<br><h2> user path = <%=   $USERPATH_VAR  %></h2>
+
+

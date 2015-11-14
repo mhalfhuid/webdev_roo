@@ -1,0 +1,17 @@
+<h1> <%= pluralize(@dim_items.size, 'DimItem') %> </h1>
+
+
+<ul>
+   <% @dim_items.each do |i| %>
+    <li> <%=i.dimensie_code%> | <%=i.dimension_id%> | <%=i.item_sleutel%> | <%=i.item_naam%> | <%=i.item_omschrijving%> |
+    <%=link_to 'koppelingen', dimension_dim_item_format_item_links_url(@dimension, i)%> </li>
+   <%end%>
+</ul>
+
+<br>
+
+<%= link_to 'back to dimension', dimension_url(@dimension)%>
+
+<br>
+<br><h2> user path = <%=   $USERPATH_VAR  %></h2>
+

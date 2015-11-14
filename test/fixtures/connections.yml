@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  dsn: MyString
+  userid: MyString
+  password: MyString
+  range: MyString
+  query: MyString
+  indeling_code: MyString
+  dimensie_code: MyString
+  userid_inserted: MyString
+  datum_inserted: 2015-08-31
+  userid_updated: MyString
+  datum_updated: 2015-08-31
+
+two:
+  id: 1
+  dsn: MyString
+  userid: MyString
+  password: MyString
+  range: MyString
+  query: MyString
+  indeling_code: MyString
+  dimensie_code: MyString
+  userid_inserted: MyString
+  datum_inserted: 2015-08-31
+  userid_updated: MyString
+  datum_updated: 2015-08-31

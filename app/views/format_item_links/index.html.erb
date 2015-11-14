@@ -1,0 +1,14 @@
+<h1> <%= pluralize(@format_item_links.size,'FormatItemLink') %> </h1>
+
+<br>
+
+<ul>
+  <% @format_item_links.each do |l| %>
+    <li><%= l.format_item_id %>| <%=l.dim_format_id%>| <%=l.dim_item_id %>| <%=l.indeling_code%> | <%=l.versie_nummer %></li>
+  <%end%>
+</ul>
+
+<br>
+<%= link_to 'back', adjustlink %>
+<br>
+<br><h2> user path = <%=   $USERPATH_VAR  %></h2>

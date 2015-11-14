@@ -1,0 +1,12 @@
+<h1> Dimension details </h1>
+
+<%=  link_to @dimension.dimensie_naam, dimension_dim_items_path(@dimension) %> | <%=  @dimension.dimensie_code %> |
+<%=  @dimension.dimensie_omschrijving %> | <%=  @dimension.bron_type %> | <%=  @dimension.bron_naam %> |
+<%=  @dimension.doeltabel_naam %> | <%=  @dimension.wijzig_ind %> | <%=  @dimension.dimensie_item_num_ind %>
+<br>
+<br>
+<%=link_to 'Dimension Formats', dimension_dim_formats_path(@dimension) %>
+<br>
+<br>
+<%=link_to 'All Dimensions', dimensions_url %>
+<br><h2> user path = <%=   $USERPATH_VAR  %></h2>

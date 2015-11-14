@@ -1,0 +1,12 @@
+<h1> <%= pluralize(@dim_formats.size ,'dimFormat') %> </h1>
+
+<ul>
+  <% @dim_formats.each do |df| %>
+    <li> <%= df.dimension_id %> | <%= df.format_version_id %> | <%=df.versie_nummer%> | <%=df.dimensie_code %>  </li>
+  <%end%>
+</ul>
+
+<br>
+<%= link_to 'to dimension', dimension_path(@dimension) %>
+
+<br><h2> user path = <%=   $USERPATH_VAR  %></h2>

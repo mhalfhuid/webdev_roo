@@ -1,0 +1,15 @@
+<h1><%=pluralize(@dimensions.size,'Dimension') %></h1>
+
+
+<ul>
+  <% @dimensions.each do |dimension| %>
+      <li><%=  link_to dimension.dimensie_naam, dimension %> | <%=  dimension.dimensie_code %> |
+      <%= dimension.dimensie_omschrijving %> </li> <br>
+  <%end%>
+</ul>
+
+<br>
+<br><h2> user path = <%=   $USERPATH_VAR  %></h2>
+
+
+

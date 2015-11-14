@@ -1,0 +1,16 @@
+<h1> <%= pluralize(@format_versions.size, 'FormatVersion') %> </h1>
+
+
+<ul>
+  <% @format_versions.each do |f| %>
+    <li> Format: <%= f.format.indeling_naam %> | format_id: <%=f.format_id %> |<%= f.indeling_code %> | <%= f.versie_nummer %> | <%=f.versie_naam %> | <%=link_to 'show items', format_format_version_format_items_path(@format,f) %>  </li>
+  <%end%>
+</ul>
+
+
+<%= link_to 'back to format', format_url(@format) %>
+<br>
+<%= link_to @format.indeling_naam, @format %>
+<br><h2> user path = <%=   $USERPATH_VAR  %></h2>
+
+

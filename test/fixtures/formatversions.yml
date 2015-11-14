@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  indeling_code: MyString
+  versie_nummer: 1
+  versie_naam: MyString
+  huidig_ind: MyString
+  geldig_van_datum: 2015-08-25
+  geldig_tot_datum: 2015-08-25
+  userid_inserted: MyString
+  datum_inserted: 2015-08-25
+  userid_updated: MyString
+  datum_updated: 2015-08-25
+
+two:
+  indeling_code: MyString
+  versie_nummer: 1
+  versie_naam: MyString
+  huidig_ind: MyString
+  geldig_van_datum: 2015-08-25
+  geldig_tot_datum: 2015-08-25
+  userid_inserted: MyString
+  datum_inserted: 2015-08-25
+  userid_updated: MyString
+  datum_updated: 2015-08-25

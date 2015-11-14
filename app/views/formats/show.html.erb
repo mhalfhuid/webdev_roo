@@ -1,0 +1,13 @@
+<h1> Format <%=@format.indeling_naam%> </h1>
+
+
+<ul>
+  <li> <%= link_to @format.indeling_naam, format_format_versions_url(@format) %> | <%= @format.indeling_omschrijving%> |
+    <%= @format.bron_naam%> | <%= @format.indeling_code%> </li> <br>
+</ul>
+<br>
+
+
+<%=link_to 'All formats', formats_url %>
+<br><h2> user path = <%=   $USERPATH_VAR  %></h2>
+

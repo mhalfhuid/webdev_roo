@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dimensie_code: MyString
+  item_sleutel: MyString
+  item_naam: MyString
+  item_omschrijving: MyString
+  userid_inserted: MyString
+  item_omschrijving: MyString
+  userid_inserted: MyString
+  datum_inserted: 2015-08-31
+  userid_updated: MyString
+  datum_updated: 2015-08-31
+
+two:
+  dimensie_code: MyString
+  item_sleutel: MyString
+  item_naam: MyString
+  item_omschrijving: MyString
+  userid_inserted: MyString
+  item_omschrijving: MyString
+  userid_inserted: MyString
+  datum_inserted: 2015-08-31
+  userid_updated: MyString
+  datum_updated: 2015-08-31

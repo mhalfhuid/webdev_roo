@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  indeling_code: MyString
+  versie_nummer: 1
+  indeling_item_sleutel: MyString
+  dimensie_code: MyString
+  dimensie_item_sleutel_van: MyString
+  dimensie_item_sleutel_tot: MyString
+  dimensie_item_sleutel_van_sort: MyString
+  dimensie_item_sleutel_tot_sort: MyString
+  is_range: 1
+  userid_inserted: MyString
+  datum_inserted: 2015-08-26
+  userid_updated: MyString
+  datum_updated: 2015-08-26
+
+two:
+  indeling_code: MyString
+  versie_nummer: 1
+  indeling_item_sleutel: MyString
+  dimensie_code: MyString
+  dimensie_item_sleutel_van: MyString
+  dimensie_item_sleutel_tot: MyString
+  dimensie_item_sleutel_van_sort: MyString
+  dimensie_item_sleutel_tot_sort: MyString
+  is_range: 1
+  userid_inserted: MyString
+  datum_inserted: 2015-08-26
+  userid_updated: MyString
+  datum_updated: 2015-08-26
