@@ -24344,3 +24344,1062 @@ Processing by DimFormatsController#index as HTML
   [1m[35mDimFormat Load (0.1ms)[0m  SELECT "dim_formats".* FROM "dim_formats"  WHERE "dim_formats"."dimension_id" = ?  [["dimension_id", 2]]
   Rendered dim_formats/index.html.erb (2.2ms)
 Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-14 20:25:45 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDimension Load (0.5ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dimensions/show.html.erb (53.0ms)
+Completed 200 OK in 445ms (Views: 140.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-14 20:25:52 +0100
+Processing by DimensionsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "dimensions"
+  [1m[36mDimension Load (10.3ms)[0m  [1mSELECT "dimensions".* FROM "dimensions"[0m
+  Rendered dimensions/index.html.erb (86.3ms)
+Completed 200 OK in 102ms (Views: 90.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/dimensions/1" for 127.0.0.1 at 2015-11-14 20:25:53 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered dimensions/show.html.erb (0.7ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dimensions/1/dim_items" for 127.0.0.1 at 2015-11-14 20:25:55 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"1"}
+  [1m[36mDimension Load (0.3ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (11.3ms)[0m  SELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 1]]
+  Rendered dim_items/index.html.erb (30.3ms)
+Completed 200 OK in 124ms (Views: 60.5ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/dimensions/1" for 127.0.0.1 at 2015-11-14 20:25:57 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDimension Load (0.1ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered dimensions/show.html.erb (0.6ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-14 20:25:58 +0100
+Processing by DimensionsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "dimensions"
+  [1m[36mDimension Load (0.2ms)[0m  [1mSELECT "dimensions".* FROM "dimensions"[0m
+  Rendered dimensions/index.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-14 20:25:59 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDimension Load (1.0ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dimensions/show.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-14 20:26:00 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[36mDimension Load (0.8ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  [1m[36mDimItem Load (12.3ms)[0m  [1mSELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (31.2ms)
+Completed 200 OK in 37ms (Views: 20.9ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/dimensions/2/dim_items/1/format_item_links" for 127.0.0.1 at 2015-11-14 20:26:02 +0100
+
+ActionController::RoutingError (uninitialized constant FormatItemLinksController):
+  activesupport (4.1.9) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.9) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.9) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.9) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.9) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:685:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.9) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/malcolm/.rvm/rubies/ruby-2.0.0-p598/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/malcolm/.rvm/rubies/ruby-2.0.0-p598/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/malcolm/.rvm/rubies/ruby-2.0.0-p598/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (21.7ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (30.1ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (277.9ms)
+
+
+Started GET "/dimensions/2/dim_items/1/format_item_links" for 127.0.0.1 at 2015-11-14 20:41:15 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"1"}
+Completed 404 Not Found in 61ms
+
+ActiveRecord::RecordNotFound (Couldn't find Format without an ID):
+  app/controllers/format_item_links_controller.rb:4:in `index'
+
+
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.7ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (76.2ms)
+
+
+Started GET "/formats" for 127.0.0.1 at 2015-11-14 20:41:22 +0100
+Processing by FormatsController#index as HTML
+  [1m[35m (19.9ms)[0m  SELECT COUNT(*) FROM "formats"
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  Rendered formats/index.html.erb (114.4ms)
+Completed 200 OK in 289ms (Views: 268.1ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/formats" for 127.0.0.1 at 2015-11-14 20:41:22 +0100
+Processing by FormatsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "formats"
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  Rendered formats/index.html.erb (2.3ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/formats/1" for 127.0.0.1 at 2015-11-14 20:41:25 +0100
+Processing by FormatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered formats/show.html.erb (12.5ms)
+Completed 200 OK in 43ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-14 20:41:29 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (15.3ms)[0m  SELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  [1m[36mFormatVersion Load (0.5ms)[0m  [1mSELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (43.4ms)
+Completed 200 OK in 89ms (Views: 71.0ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-14 20:41:31 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.2ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.5ms)[0m  SELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (223.6ms)
+Completed 200 OK in 301ms (Views: 245.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-14 20:41:33 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (23.6ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", "format_version_id"]]
+Completed 404 Not Found in 37ms
+
+ActiveRecord::RecordNotFound (Couldn't find FormatVersion with 'id'=format_version_id):
+  app/controllers/format_item_links_controller.rb:7:in `index'
+
+
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.7ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.6ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 20:46:56 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+Completed 404 Not Found in 95ms
+
+ActiveRecord::RecordNotFound (Couldn't find Format without an ID):
+  app/controllers/format_item_links_controller.rb:7:in `index'
+
+
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.0ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.6ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (29.9ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (228.6ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 20:47:01 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Format without an ID):
+  app/controllers/format_item_links_controller.rb:7:in `index'
+
+
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (19.6ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.8ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-15 20:47:18 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[36mFormat Load (49.4ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (39.4ms)[0m  SELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  [1m[36mFormatVersion Load (23.7ms)[0m  [1mSELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (81.9ms)
+Completed 200 OK in 253ms (Views: 75.6ms | ActiveRecord: 113.1ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 20:47:20 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.2ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (12.1ms)[0m  SELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (32.3ms)
+Completed 200 OK in 160ms (Views: 96.1ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 20:47:22 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Format without an ID):
+  app/controllers/format_item_links_controller.rb:7:in `index'
+
+
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.7ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.5ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 20:48:44 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.2ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.2ms)[0m  [1mSELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (2.9ms)[0m  SELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?  [["format_item_id", 2]]
+  Rendered format_item_links/index.html.erb (5.8ms)
+Completed 200 OK in 150ms (Views: 34.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 20:48:50 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.1ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.3ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (3.9ms)
+Completed 200 OK in 27ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 20:48:51 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.1ms)[0m  SELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?[0m  [["format_item_id", 2]]
+  Rendered format_item_links/index.html.erb (4.0ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 20:48:54 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.2ms)[0m  SELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (3.7ms)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-15 20:55:23 +0100
+Processing by DimensionsController#index as HTML
+  [1m[36m (6.6ms)[0m  [1mSELECT COUNT(*) FROM "dimensions"[0m
+  [1m[35mDimension Load (0.2ms)[0m  SELECT "dimensions".* FROM "dimensions"
+  Rendered dimensions/index.html.erb (22.1ms)
+Completed 200 OK in 95ms (Views: 45.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-15 20:55:24 +0100
+Processing by DimensionsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dimensions"[0m
+  [1m[35mDimension Load (0.2ms)[0m  SELECT "dimensions".* FROM "dimensions"
+  Rendered dimensions/index.html.erb (2.5ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-15 20:55:27 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDimension Load (0.3ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dimensions/show.html.erb (0.6ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 20:55:28 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[35mDimension Load (0.3ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  [1m[35mDimItem Load (0.5ms)[0m  SELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (15.6ms)
+Completed 200 OK in 50ms (Views: 35.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/dimensions/2/dim_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 20:55:30 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"1"}
+  [1m[36mDimension Load (0.2ms)[0m  [1mSELECT "dimensions".* FROM "dimensions"[0m
+Completed 500 Internal Server Error in 57ms
+
+NameError (undefined local variable or method `dimension_id' for #<FormatItemLinksController:0x007fc55d288ed8>):
+  app/controllers/format_item_links_controller.rb:22:in `index'
+
+
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/malcolm/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.3ms)
+
+
+Started GET "/dimensions/2/dim_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 20:55:57 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"1"}
+  [1m[35mDimension Load (0.2ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mDimItem Load (0.2ms)[0m  [1mSELECT  "dim_items".* FROM "dim_items"  WHERE "dim_items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (16.3ms)[0m  SELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?  [["dim_item_id", 1]]
+  [1m[36mFormatItemLink Load (0.5ms)[0m  [1mSELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?[0m  [["dim_item_id", 1]]
+  Rendered format_item_links/index.html.erb (37.3ms)
+Completed 200 OK in 102ms (Views: 37.6ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 20:56:00 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[35mDimension Load (0.2ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  [1m[35mDimItem Load (0.3ms)[0m  SELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (10.8ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dimensions/2/dim_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 20:58:41 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"1"}
+  [1m[36mDimension Load (0.2ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mDimItem Load (0.2ms)[0m  SELECT  "dim_items".* FROM "dim_items"  WHERE "dim_items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (17.6ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?[0m  [["dim_item_id", 1]]
+  [1m[35mFormatItemLink Load (0.5ms)[0m  SELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?  [["dim_item_id", 1]]
+  Rendered format_item_links/index.html.erb (34.8ms)
+Completed 200 OK in 124ms (Views: 53.8ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 20:58:42 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[36mDimension Load (0.1ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  [1m[36mDimItem Load (0.2ms)[0m  [1mSELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (4.7ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-15 20:58:44 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDimension Load (0.2ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dimensions/show.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-15 20:58:45 +0100
+Processing by DimensionsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dimensions"[0m
+  [1m[35mDimension Load (0.1ms)[0m  SELECT "dimensions".* FROM "dimensions"
+  Rendered dimensions/index.html.erb (3.0ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dimensions/1" for 127.0.0.1 at 2015-11-15 20:58:47 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDimension Load (0.2ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered dimensions/show.html.erb (3.6ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dimensions/1/dim_items" for 127.0.0.1 at 2015-11-15 20:58:48 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"1"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 1]]
+  Rendered dim_items/index.html.erb (4.6ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dimensions/1" for 127.0.0.1 at 2015-11-15 20:58:50 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDimension Load (0.2ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered dimensions/show.html.erb (0.6ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-15 20:58:53 +0100
+Processing by DimensionsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dimensions"[0m
+  [1m[35mDimension Load (0.1ms)[0m  SELECT "dimensions".* FROM "dimensions"
+  Rendered dimensions/index.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-15 20:58:54 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDimension Load (0.4ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dimensions/show.html.erb (0.9ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 20:58:55 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  [1m[35mDimItem Load (0.1ms)[0m  SELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (3.6ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dimensions/2/dim_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 20:58:57 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"2"}
+  [1m[36mDimension Load (0.1ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mDimItem Load (0.2ms)[0m  SELECT  "dim_items".* FROM "dim_items"  WHERE "dim_items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?[0m  [["dim_item_id", 2]]
+  [1m[35mFormatItemLink Load (0.1ms)[0m  SELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?  [["dim_item_id", 2]]
+  Rendered format_item_links/index.html.erb (2.0ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/formats" for 127.0.0.1 at 2015-11-15 20:59:03 +0100
+Processing by FormatsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "formats"[0m
+  [1m[35mFormat Load (0.2ms)[0m  SELECT "formats".* FROM "formats"
+  Rendered formats/index.html.erb (12.5ms)
+Completed 200 OK in 148ms (Views: 50.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/formats" for 127.0.0.1 at 2015-11-15 20:59:03 +0100
+Processing by FormatsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "formats"[0m
+  [1m[35mFormat Load (0.2ms)[0m  SELECT "formats".* FROM "formats"
+  Rendered formats/index.html.erb (5.1ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/formats/1" for 127.0.0.1 at 2015-11-15 20:59:05 +0100
+Processing by FormatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFormat Load (0.4ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered formats/show.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 10.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-15 20:59:07 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (9.5ms)[0m  [1mSELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  [1m[35mFormatVersion Load (0.3ms)[0m  SELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (27.4ms)
+Completed 200 OK in 55ms (Views: 41.0ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 20:59:08 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.5ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.3ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (20.5ms)
+Completed 200 OK in 62ms (Views: 33.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 20:59:09 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.2ms)[0m  SELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?[0m  [["format_item_id", 2]]
+  Rendered format_item_links/index.html.erb (4.2ms)
+Completed 200 OK in 46ms (Views: 11.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 20:59:11 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.1ms)[0m  SELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (1.8ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-15 20:59:14 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (3.3ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 20:59:16 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.3ms)[0m  SELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (3.5ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 20:59:17 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (2.2ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.2ms)[0m  [1mSELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?  [["format_item_id", 2]]
+  Rendered format_item_links/index.html.erb (1.3ms)
+Completed 200 OK in 37ms (Views: 4.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 20:59:19 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.1ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.2ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 20:59:20 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"1"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.1ms)[0m  SELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?[0m  [["format_item_id", 1]]
+  [1m[35mFormatItemLink Load (0.2ms)[0m  SELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?  [["format_item_id", 1]]
+  Rendered format_item_links/index.html.erb (3.1ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 20:59:22 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.1ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.1ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (2.3ms)
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 21:00:02 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"1"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.2ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.2ms)[0m  SELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?[0m  [["format_item_id", 1]]
+  [1m[35mFormatItemLink Load (0.2ms)[0m  SELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?  [["format_item_id", 1]]
+  Rendered format_item_links/index.html.erb (18.3ms)
+Completed 200 OK in 86ms (Views: 20.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 21:00:04 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.3ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.2ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.4ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (7.4ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 21:00:04 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.3ms)[0m  SELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?[0m  [["format_item_id", 2]]
+  Rendered format_item_links/index.html.erb (1.7ms)
+Completed 200 OK in 16ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 21:00:06 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[35mFormat Load (0.7ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.2ms)[0m  SELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (2.1ms)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-15 21:00:07 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  [1m[36mFormatVersion Load (0.2ms)[0m  [1mSELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (8.9ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 21:00:08 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.1ms)[0m  SELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (1.9ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-15 21:00:15 +0100
+Processing by DimensionsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dimensions"[0m
+  [1m[35mDimension Load (0.2ms)[0m  SELECT "dimensions".* FROM "dimensions"
+  Rendered dimensions/index.html.erb (15.0ms)
+Completed 200 OK in 80ms (Views: 16.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dimensions/1" for 127.0.0.1 at 2015-11-15 21:00:20 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDimension Load (0.3ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered dimensions/show.html.erb (0.6ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dimensions/1/dim_items" for 127.0.0.1 at 2015-11-15 21:00:21 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"1"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 1]]
+  Rendered dim_items/index.html.erb (7.5ms)
+Completed 200 OK in 41ms (Views: 29.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/dimensions/1" for 127.0.0.1 at 2015-11-15 21:00:22 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered dimensions/show.html.erb (0.7ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-15 21:00:24 +0100
+Processing by DimensionsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "dimensions"[0m
+  [1m[35mDimension Load (0.2ms)[0m  SELECT "dimensions".* FROM "dimensions"
+  Rendered dimensions/index.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-15 21:00:25 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDimension Load (0.2ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dimensions/show.html.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 21:00:27 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  [1m[35mDimItem Load (0.2ms)[0m  SELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (14.1ms)
+Completed 200 OK in 28ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dimensions/2/dim_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 21:00:28 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"2"}
+  [1m[36mDimension Load (0.2ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mDimItem Load (0.4ms)[0m  SELECT  "dim_items".* FROM "dim_items"  WHERE "dim_items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?[0m  [["dim_item_id", 2]]
+  [1m[35mFormatItemLink Load (0.5ms)[0m  SELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?  [["dim_item_id", 2]]
+  Rendered format_item_links/index.html.erb (8.8ms)
+Completed 200 OK in 21ms (Views: 12.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 21:00:30 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[36mDimension Load (0.1ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  [1m[36mDimItem Load (0.1ms)[0m  [1mSELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (29.8ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dimensions/2/dim_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 21:00:31 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"1"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mDimItem Load (0.1ms)[0m  [1mSELECT  "dim_items".* FROM "dim_items"  WHERE "dim_items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?  [["dim_item_id", 1]]
+  [1m[36mFormatItemLink Load (0.1ms)[0m  [1mSELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?[0m  [["dim_item_id", 1]]
+  Rendered format_item_links/index.html.erb (1.9ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 21:00:33 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  [1m[35mDimItem Load (0.2ms)[0m  SELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (4.7ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-15 21:00:34 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDimension Load (0.1ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dimensions/show.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 21:04:49 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[35mDimension Load (0.2ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  [1m[35mDimItem Load (0.2ms)[0m  SELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (15.2ms)
+Completed 200 OK in 136ms (Views: 16.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/dimensions/2/dim_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 21:04:50 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"1"}
+  [1m[36mDimension Load (0.1ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mDimItem Load (0.2ms)[0m  SELECT  "dim_items".* FROM "dim_items"  WHERE "dim_items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?[0m  [["dim_item_id", 1]]
+  [1m[35mFormatItemLink Load (0.2ms)[0m  SELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?  [["dim_item_id", 1]]
+  Rendered format_item_links/index.html.erb (23.0ms)
+Completed 200 OK in 36ms (Views: 24.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 21:04:52 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[36mDimension Load (0.4ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  [1m[36mDimItem Load (0.2ms)[0m  [1mSELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (5.4ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-15 21:04:53 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDimension Load (0.3ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dimensions/show.html.erb (2.2ms)
+Completed 200 OK in 11ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/formats" for 127.0.0.1 at 2015-11-15 21:04:57 +0100
+Processing by FormatsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "formats"[0m
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  Rendered formats/index.html.erb (12.8ms)
+Completed 200 OK in 53ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/formats/2" for 127.0.0.1 at 2015-11-15 21:05:00 +0100
+Processing by FormatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFormat Load (0.3ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered formats/show.html.erb (1.6ms)
+Completed 200 OK in 35ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/formats" for 127.0.0.1 at 2015-11-15 21:05:01 +0100
+Processing by FormatsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "formats"
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  Rendered formats/index.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/formats/1" for 127.0.0.1 at 2015-11-15 21:05:02 +0100
+Processing by FormatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered formats/show.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-15 21:05:03 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  [1m[36mFormatVersion Load (0.3ms)[0m  [1mSELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (16.7ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 21:05:04 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[35mFormat Load (0.3ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.3ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.3ms)[0m  SELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (20.8ms)
+Completed 200 OK in 132ms (Views: 24.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 21:05:05 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.1ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.4ms)[0m  [1mSELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?  [["format_item_id", 2]]
+  Rendered format_item_links/index.html.erb (2.3ms)
+Completed 200 OK in 14ms (Views: 4.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 21:05:06 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.2ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.2ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (2.8ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 21:05:07 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"1"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.2ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.1ms)[0m  SELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?[0m  [["format_item_id", 1]]
+  [1m[35mFormatItemLink Load (0.4ms)[0m  SELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?  [["format_item_id", 1]]
+  Rendered format_item_links/index.html.erb (5.1ms)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 21:05:09 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.2ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.1ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (2.0ms)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-15 21:05:11 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  [1m[35mFormatVersion Load (0.2ms)[0m  SELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (4.5ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/formats/1" for 127.0.0.1 at 2015-11-15 21:26:57 +0100
+Processing by FormatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered formats/show.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-15 21:26:59 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  [1m[35mFormatVersion Load (0.1ms)[0m  SELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (2.6ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 21:27:00 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.2ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.2ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (24.8ms)
+Completed 200 OK in 41ms (Views: 33.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items/1/format_item_links" for 127.0.0.1 at 2015-11-15 21:27:36 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2", "format_item_id"=>"1"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFormatVersion Load (0.1ms)[0m  [1mSELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFormatItem Load (0.1ms)[0m  SELECT  "format_items".* FROM "format_items"  WHERE "format_items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?[0m  [["format_item_id", 1]]
+  [1m[35mFormatItemLink Load (0.2ms)[0m  SELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."format_item_id" = ?  [["format_item_id", 1]]
+  Rendered format_item_links/index.html.erb (3.6ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/formats/1/format_versions/2/format_items" for 127.0.0.1 at 2015-11-15 21:27:37 +0100
+Processing by FormatItemsController#index as HTML
+  Parameters: {"format_id"=>"1", "format_version_id"=>"2"}
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormatVersion Load (0.1ms)[0m  SELECT  "format_versions".* FROM "format_versions"  WHERE "format_versions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFormatItem Load (0.3ms)[0m  [1mSELECT "format_items".* FROM "format_items"  WHERE "format_items"."format_version_id" = ?[0m  [["format_version_id", 2]]
+  Rendered format_items/index.html.erb (4.5ms)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/formats/1/format_versions" for 127.0.0.1 at 2015-11-15 21:27:40 +0100
+Processing by FormatVersionsController#index as HTML
+  Parameters: {"format_id"=>"1"}
+  [1m[35mFormat Load (0.1ms)[0m  SELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "format_versions"  WHERE "format_versions"."format_id" = ?[0m  [["format_id", 1]]
+  [1m[35mFormatVersion Load (0.2ms)[0m  SELECT "format_versions".* FROM "format_versions"  WHERE "format_versions"."format_id" = ?  [["format_id", 1]]
+  Rendered format_versions/index.html.erb (7.5ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/formats/1" for 127.0.0.1 at 2015-11-15 21:27:41 +0100
+Processing by FormatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT  "formats".* FROM "formats"  WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered formats/show.html.erb (2.5ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dimensions" for 127.0.0.1 at 2015-11-15 21:27:50 +0100
+Processing by DimensionsController#index as HTML
+  [1m[35m (16.6ms)[0m  SELECT COUNT(*) FROM "dimensions"
+  [1m[36mDimension Load (0.2ms)[0m  [1mSELECT "dimensions".* FROM "dimensions"[0m
+  Rendered dimensions/index.html.erb (20.2ms)
+Completed 200 OK in 57ms (Views: 39.6ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-15 21:27:52 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDimension Load (0.3ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dimensions/show.html.erb (0.6ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 21:27:55 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[36mDimension Load (0.2ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  [1m[36mDimItem Load (0.1ms)[0m  [1mSELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (13.1ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dimensions/2/dim_items/2/format_item_links" for 127.0.0.1 at 2015-11-15 21:27:56 +0100
+Processing by FormatItemLinksController#index as HTML
+  Parameters: {"dimension_id"=>"2", "dim_item_id"=>"2"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mDimItem Load (0.1ms)[0m  [1mSELECT  "dim_items".* FROM "dim_items"  WHERE "dim_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?  [["dim_item_id", 2]]
+  [1m[36mFormatItemLink Load (0.1ms)[0m  [1mSELECT "format_item_links".* FROM "format_item_links"  WHERE "format_item_links"."dim_item_id" = ?[0m  [["dim_item_id", 2]]
+  Rendered format_item_links/index.html.erb (3.0ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 21:27:58 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[35mDimension Load (0.2ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  [1m[35mDimItem Load (0.2ms)[0m  SELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (5.2ms)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dimensions/2" for 127.0.0.1 at 2015-11-15 21:28:00 +0100
+Processing by DimensionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDimension Load (0.1ms)[0m  [1mSELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dimensions/show.html.erb (0.6ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dimensions/2/dim_items" for 127.0.0.1 at 2015-11-15 21:28:02 +0100
+Processing by DimItemsController#index as HTML
+  Parameters: {"dimension_id"=>"2"}
+  [1m[35mDimension Load (0.1ms)[0m  SELECT  "dimensions".* FROM "dimensions"  WHERE "dimensions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?[0m  [["dimension_id", 2]]
+  [1m[35mDimItem Load (7.0ms)[0m  SELECT "dim_items".* FROM "dim_items"  WHERE "dim_items"."dimension_id" = ?  [["dimension_id", 2]]
+  Rendered dim_items/index.html.erb (10.0ms)
+Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 7.3ms)
